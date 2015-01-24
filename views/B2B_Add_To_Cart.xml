@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+      <template id="product_add_to_cart_Custom" inherit_id="website_sale.product" name="Add To Quote - Logged In" customize_show="True">
+        <xpath expr="//a[@id='add_to_cart']" position="replace">
+          <a t-if="not user_id.partner_id.name == 'Public user'" id="add_to_cart" class="btn btn-primary btn-lg mt8 js_check_product a-submit" href="#"><i class="fa fa-angle-double-right"></i>&amp;nbsp;&amp;nbsp;&amp;nbsp;Add to Quotation</a>
+        </xpath>
+      </template>
+      <!-- Add any number of other template tags in between the data tags to add more view modifications -->
+    </data>
+</openerp>
